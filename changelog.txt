@@ -6,6 +6,8 @@ VERSION 1.4 12/19/2014
 ———————————————————————————
 Version 1.4 is siq. We added transitions to the mask (finally!) so that it looks nice and pretty on open, and if you’re using a one page layout, looks just as slick. 
 
+OH HEY! Also, it’s good to not repeat yourself, so we threw out some lines of code by defining the functions first, so it makes the code look a bit cleaner. I’m sure there’s more work to be done with that… 
+
 VERSION 1.3+ Now lives on GitHub, no longer bitbucket.
 ___________________________ 
 

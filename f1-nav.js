@@ -10,8 +10,13 @@ jQuery(document).ready(function($) {
 		var remove = function(){ //function we use to remove the mask
 						$('.mask').remove(); 
 					  }
-		
-		var i = 0;
+					  
+			maskit = function(){
+					$('.mask').animate({opacity:.0});	
+					setTimeout(remove, 800);
+					}
+			i = 0;
+			
 		$('#nav-toggle').click(function(){ //listen for the click on the menu icon
 			i++; // Add 1 to the count
 			$('#nav-toggle').toggleClass('active');
@@ -26,23 +31,20 @@ jQuery(document).ready(function($) {
 				$('body').append('<div class="mask"></div>'); //lets create a nice mask to dim the content
 				$('.mask').animate({opacity:1.0});	
 			} else {
-				$('.mask').animate({opacity:.0});	
-				setTimeout(remove, 800);
+				maskit();
 			}
 
 	//or alternatively you can click the mask and make that shit go away.
 		$('.mask').click(function(){ //listen for the click on the mask
 			$('.panel').slideUp(500); //pull up the nav
-			$('.mask').animate({opacity:.0});	
-				setTimeout(remove, 800);
+			maskit();
 			$('#nav-toggle').removeClass('active'); //mmm hamburger
 			i++;  // Add 1 to the count
 			});
 			
 		$('.nav-item').click(function(){ //oh snap, you want to close the nav on a link click?
 			$('.panel').slideUp(500); //pull up the nav
-			$('.mask').animate({opacity:.0});	
-				setTimeout(remove, 800);
+			maskit(); 
 			$('#nav-toggle').removeClass('active');
 			i = 0;  // reset the counter
 			});
