@@ -1,7 +1,50 @@
 <html>
 	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
+		<link rel="stylesheet" href="css/f1-nav.css" type="text/css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
 	</head>
+	<style>
+		@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,900italic|Raleway:400,700,300);
+		/*demo specific styles*/
+		html, html a {
+			-webkit-font-smoothing: antialiased !important;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+		}
+		body{
+			background: #476073;
+			color: rgb(232, 236, 229);
+			font-family: 'Raleway', Helvetica, sans-serif;
+			font-weight: 300;
+		}
+		h1,h2,h3{
+			font-family: 'Source Sans Pro';
+			font-weight: 700;
+			font-style: italic;
+			color: rgb(255, 251, 185);
+		}
+		h4,h5,h6{
+			font-family: 'Source Sans Pro';
+			font-weight: 400;
+			color: rgb(255,251,185);
+		}
+		
+		header span{
+			font-family: Helvetica;
+			font-weight: bold;
+			letter-spacing: -1px;
+		}
+		
+		header{
+			padding: 13px 0;
+			font-size: 2em;
+		}
+	
+		.content{
+			padding: 100px 0 0;
+		}
+	</style>
 	<body class="f1-nav">
 		<div class="panel">
 			<ul>
@@ -12,105 +55,50 @@
 				<li class="nav-item"><a href="#">5</a></li>
 			</ul>
 		</div>
-	<style>
-		body,html{
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-		}
-		
-		header{
-			position: fixed;
-			width: 100%;
-			background:#e0e0e0;
-			height: 80px;
-			z-index: 9999;
-		}
-		.panel{
-			position: absolute;
-		    width: 100%; /*you could have different widths if you want, but 100% is most common*/
-			border: 0px;
-			padding: 0;	
-			background:red;	
-			color: white;
-			top: 80px;
-			display: none;
-			z-index: 9999;
-			overflow: scroll;
-			margin-bottom: 0;
-			padding-bottom: 0;
-			-ms-overflow-style: none; /* hides the scrollbars for Internet Explorer on the panel */
-		}
-		
-		.mask{
-			background: rgba(0,0,0,0.42);
-			height: 100%;
-			width: 100%;
-			z-index: 9998;
-			position: fixed;
-			top:0;	
-			opacity: 0;
-		}
-		
-		/*animated hamburger styles*/
-	#nav-toggle{
-		width: 23px;
-		height: 23px;
-		display: block;
-		background: none;
-		position: absolute;
-		top: 2px;
-		right: 5px;
-		transition: all .3s ease;
-	}
 
-	#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-	  cursor: pointer;
-	  border-radius: 1px;
-	  height: 2px;
-	  width: 23px;
-	  background: rgb(171,171,171);
-	  position: absolute;
-	  top: 16px;
-	  right: 0px;
-	  display: block;
-	  content: '';
-	}
-	#nav-toggle span:before {
-	  top: -6px;
-	}
-	#nav-toggle span:after {
-	  bottom: -6px;
-	  top: 6px; 
-	}
-	
-	#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-	  transition: all 500ms ease-in-out;
-	}
-	#nav-toggle.active span {
-	  background-color: transparent;
-	}
-	#nav-toggle.active span:before, #nav-toggle.active span:after {
-	  top: 0;
-	}
-	#nav-toggle.active span:before {
-	  transform: rotate(45deg);
-	  -webkit-transform: rotate(45deg);
-	}
-	#nav-toggle.active span:after {
-	  transform: rotate(-45deg);
-	  -webkit-transform: rotate(-45deg);
-	}
-	#nav-toggle:hover{
-		opacity: .5;
-	}
-
-	</style>
-		<header>Hey man this is the header. <a id="nav-toggle" class="mm_open"><span></span></a></header>		
-		
-		
-		
+		<header>
+			<div class="row">
+				<div class="small-4 medium-6 columns">
+					<span>factor1</span> nav, it's for websites! 
+				</div>
+				<div class="small-4 medium-6 columns">
+					<a id="nav-toggle" class="mm_open"><span></span></a>
+				</div>
+			</div>
+		</header>
+				
+		<div class="row content">
+			<div class="medium-10 medium-centered columns">
+				<h1>Rebel Mission to Ord Mantell</h1>
+				<p>You are a part of the Rebel Alliance and a traitor! Take her away! No! Alderaan is peaceful. We have no weapons. You can't possibly&hellip; Hey, Luke! May the Force be with you.</p>
+				<h2>The Empire Strikes Back</h2>
+				<p>As you wish. Don't underestimate the Force. Escape is not his plan. I must face him, alone.</p>
+				<ul>
+				<li>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</li>
+				<li>What!?</li>
+				<li>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</li>
+				</ul>
+				<h3>Revenge of the Sith</h3>
+				<p>What!? Dantooine. They're on Dantooine. I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan-- Remember, a Jedi can feel the Force flowing through him. I can't get involved! I've got work to do! It's not that I like the Empire, I hate it, but there's nothing I can do about it right now. It's such a long way from here. You don't believe in the Force, do you?</p>
+				<h4>The Force Unleashed</h4>
+				<p>Partially, but it also obeys your commands. You don't believe in the Force, do you? Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. As you wish. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct.</p>
+				<ol>
+				<li>Dantooine. They're on Dantooine.</li>
+				<li>No! Alderaan is peaceful. We have no weapons. You can't possibly&hellip;</li>
+				<li>In my experience, there is no such thing as luck.</li>
+				<li>Oh God, my uncle. How am I ever gonna explain this?</li>
+				<li>As you wish.</li>
+				</ol>
+				<h5>Attack of the Clones</h5>
+				<p>Partially, but it also obeys your commands. I find your lack of faith disturbing. I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan-- Dantooine. They're on Dantooine. In my experience, there is no such thing as luck. Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going.</p>
+				<h6>The Sith Lords</h6>
+				<p>I have traced the Rebel spies to her. Now she is my only link to finding their secret base. The Force is strong with this one. I have you now. Oh God, my uncle. How am I ever gonna explain this? Ye-ha!</p>
+				<p>Remember, a Jedi can feel the Force flowing through him. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. As you wish. Hokey religions and ancient weapons are no match for a good blaster at your side, kid. Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense.</p>
+				<p>The more you tighten your grip, Tarkin, the more star systems will slip through your fingers. Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. Look, I ain't in this for your revolution, and I'm not in it for you, Princess. I expect to be well paid. I'm in it for the money.</p>
+				<p>Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. Escape is not his plan. I must face him, alone. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Look, I ain't in this for your revolution, and I'm not in it for you, Princess. I expect to be well paid. I'm in it for the money. You mean it controls your actions? The plans you refer to will soon be back in our hands.</p>
+				<p>Remember, a Jedi can feel the Force flowing through him. Don't underestimate the Force. You're all clear, kid. Let's blow this thing and go home! Dantooine. They're on Dantooine. You are a part of the Rebel Alliance and a traitor! Take her away! What?!</p>
+			</div>
+		</div>
 		<script src="f1-nav.js"></script>
 	</body>
 </html>

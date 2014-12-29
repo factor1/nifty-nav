@@ -81,9 +81,7 @@ You can choose to close the nav when clicking on the navigation items in the nav
 ```
 ###6- Future Updates & Ramblings
 
-Also would like to add a transition for the mask. Currently its a hard snap from visible/not-visible. Think it would be a nice touch to have a quick transition. 
-
-Would like to blur background content as well. 
+We could try to blur the background? 
 
 
 ###7- Bugs and Tips
