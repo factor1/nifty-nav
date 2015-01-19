@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 		$('#nav-toggle').click(function(){ //listen for the click on the menu icon
 			i++; // Add 1 to the count
 			$('#nav-toggle').toggleClass('active');
-			$('.panel').slideToggle(500).css("position", "absolute"); //toggle the nav up/down
+			$('.panel').slideToggle(500).css("position", "fixed"); //toggle the nav up/down
 			
 			// Check if the counter is even or odd
 			var isEven = function(clickCounter){
