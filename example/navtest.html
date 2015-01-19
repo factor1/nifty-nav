@@ -42,7 +42,7 @@
 			color: rgb(255,251,185);
 		}
 		
-		header span{
+		header .factor1{
 			font-family: Helvetica;
 			font-weight: bold;
 			letter-spacing: -1px;
@@ -64,6 +64,15 @@
 			text-align: center;
 			padding: 19px 4px 0;
 		}
+		
+		@media screen and (max-width: 40em){
+			.panel ul li{
+				display: block;
+				padding: 5px 0;
+				text-align: left;
+			}
+			.tag{display: none;}
+		}
 	</style>
 	<body class="f1-nav">
 		<div class="panel">
@@ -83,9 +92,9 @@
 		<header>
 			<div class="row">
 				<div class="small-4 medium-6 columns">
-					<span>factor1</span> nav, it's for websites! 
+					<span class="factor1">factor1</span><span class="tag"> nav, it's for websites!</span>
 				</div>
-				<div class="small-4 medium-6 columns">
+				<div class="small-4 medium-2 columns">
 					<a id="nav-toggle" class="mm_open"><span></span></a>
 				</div>
 			</div>
