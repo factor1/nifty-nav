@@ -8,13 +8,13 @@ jQuery(document).ready(function($) {
 	$(document).ready(function(){
 		
 		var remove = function(){ //function we use to remove the mask
-						$('.mask').remove(); 
-					  }
+						$('.mask').remove();
+					  };
 					  
 			maskit = function(){
 					$('.mask').animate({opacity:.0});	
 					setTimeout(remove, 800);
-					}
+					};
 			i = 0;
 			
 		$('#nav-toggle').click(function(){ //listen for the click on the menu icon
@@ -24,10 +24,10 @@ jQuery(document).ready(function($) {
 			
 			// Check if the counter is even or odd
 			var isEven = function(clickCounter){
-				return (clickCounter%2 == 0) ? true : false;
+				return (clickCounter%2 === 0) ? true : false;
 			};
 			
-			if (isEven(i) == false){											
+			if (isEven(i) === false){											
 				$('body').append('<div class="mask"></div>'); //lets create a nice mask to dim the content
 				$('.mask').animate({opacity:1.0});	
 			} else {

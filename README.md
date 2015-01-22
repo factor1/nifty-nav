@@ -79,10 +79,13 @@ You can choose to close the nav when clicking on the navigation items in the nav
 </nav>
 
 ```
-###6- Future Updates & Ramblings
 
-We could try to blur the background? 
+###6- Adding the Hamburger
+Adding the hamburger to your site is pretty straight forward. Just add the following, and edit any CSS as needed for placement.
 
+```
+<a id="nav-toggle" class="mm_open"><span></span></a>
+```
 
 ###7- Bugs and Tips
-* Don't want the nav to push down the body content? That's fine... just move the <div> containing 'panel' wherever you want the drop down to originate from and play with the positioning of the item in the JS file. 
+* Don't want the nav to push down the body content? That's fine... just move the <div> containing 'panel' wherever you want the drop down to originate from and play with the positioning of the item in the JS/CSS file. 
