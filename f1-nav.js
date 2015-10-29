@@ -49,5 +49,16 @@ jQuery(document).ready(function($) {
 			i = 0;  // reset the counter
 			});
 		});//close up everything
+		
+	// Listen for if any nav item has a child ul and toggle it open
+		var mobileNavItem = $('.panel ul li');
+		var $mobileClicked;
+		
+		mobileNavItem.on('click', function(){
+			$mobileClicked = $(this);
+			$mobileClicked.find('.sub-menu').slideToggle();
+			$mobileClicked.find('a').toggleClass('menu-opened');
+		});
+	
 	});
 });
