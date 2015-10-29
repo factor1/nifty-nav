@@ -4,7 +4,7 @@ A SWEET JQUERY TOOL WRITTEN BY MATT ADAMS (@mattada) AND ERIC STOUT (@buschschwi
 
 HTTP://FACTOR1STUDIOS.COM
 
-**VERSION 1.4 10/08/2015**
+**VERSION 1.5.0 10/29/2015**
 
 ## TABLE OF CONTENTS ##
 1. PANEL
@@ -13,6 +13,7 @@ HTTP://FACTOR1STUDIOS.COM
 4. PANEL DEFAULT CSS STYLES
 5. CLOSING THE NAV WITH NAV ITEMS
 6. FUTURE UPDATES & RAMBLINGS
+7. TOGGLING CHILDREN MENUS
 7. BUGS AND TIPS
 
 
@@ -87,5 +88,9 @@ Adding the hamburger to your site is pretty straight forward. Just add the follo
 <a id="nav-toggle" class="mm_open"><span></span></a>
 ```
 
-###7- Bugs and Tips
+###7-Toggling sub-menus
+Version 1.5.0 brings sub-menu toggling based off of the Wordpress menu structure. Basically what the JS does is look for a `ul` inside of `.panel` and if it has a child that has the class `.sub-menu` it will toggle its display property. It will add a class of `.menu-opened` which will allow you to style it when the parent ul is "opened". By default `.menu-opened` has no styles. 
+
+###8- Bugs and Tips
 * Don't want the nav to push down the body content? That's fine... just move the <div> containing 'panel' wherever you want the drop down to originate from and play with the positioning of the item in the JS/CSS file. 
+* Feel free to open an issue if you run into any problems while using Nifty Nav. 
