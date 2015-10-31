@@ -1,2 +1,4 @@
 .DS_Store
 example/.DS_Store
+node_modules
+bower_components
