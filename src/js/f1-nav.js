@@ -33,8 +33,8 @@ $(document).ready(function(){
 		 
 		$('#nifty-nav-toggle').toggleClass('nifty-active');
 		
-		//toggle the nav up/down
-		$('.nifty-panel').slideToggle(500).css("position", "fixed"); 
+		// toggle the nav up/down
+		$('.nifty-panel').slideToggle(500).css("position", "absolute"); 
 	
 		// Check if the counter is even or odd
 		var isEven = function(clickCounter){
@@ -49,23 +49,26 @@ $(document).ready(function(){
 		} else {
 			niftyUnMaskIt();
 		}
+		
+		// or alternatively you can click the mask and make that shit go away.
+		$('.nifty-mask').click(function(){
+			
+			//slide up the nav panel
+			$('.nifty-panel').slideUp(500);
+			
+			//remove the mask
+			niftyUnMaskIt();
+			
+			// remove the active class on the hamburger mmmm hamburger
+			$('#nifty-nav-toggle').removeClass('nifty-active');
+			
+			i++;  // Add 1 to the count
+		});
+		
 	});
 	// close up our listener for nav toggle
 
-	// or alternatively you can click the mask and make that shit go away.
-	$('.nifty-mask').click(function(){
-		
-		//slide up the nav panel
-		$('.nifty-panel').slideUp(500);
-		
-		//remove the mask
-		niftyUnMaskIt();
-		
-		// remove the active class on the hamburger mmmm hamburger
-		$('#nifty-nav-toggle').removeClass('nifty-active');
-		
-		i++;  // Add 1 to the count
-	});
+	
 
 	/*
 	Oh snap! You want to close the menu when clicking a nav-item?

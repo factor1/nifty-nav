@@ -1,9 +1,21 @@
-////////////////////////////////////////////////////////////////////////
-///////////------Factor1 Nav------//////////////////////////////////////
-// a jquery tool by Eric Stout (@buschschwick) and Matt Adams (@mattada) 
-// version 1.4 ////////////////////////////////////////////////////////
-// http://factor1studios.com  ////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
+/*
+Nifty Nav
+By Eric Stout / Factor1
+http://factor1studios.com
+*/
+
+// Easily set your styles here using sass variables
+
+// panel options
+$panel-color: rgb(229, 229, 229);
+$panel-top-distance: 80px;
+
+// mask options
+$mask-color:	rgba(0,0,0,0.62);
+
+// hamburger options
+$hamburger-color: rgb(171,171,171);
+
 body,html{
 width: 100%;
 height: 100%;
@@ -11,14 +23,18 @@ margin: 0;
 padding: 0;
 }
 
-.panel{
+header{
+z-index: 9999;
+}
+
+.nifty-panel{
 position: relative;
 width: 100%; /*you could have different widths if you want, but 100% is most common*/
 border: 0px;
 padding: 0;	
-background:rgb(229, 229, 229);	
+background: $panel-color;	
 color: white;
-top: 80px;
+top: $panel-top-distance;
 display: none;
 z-index: 9999;
 overflow: scroll;
@@ -27,8 +43,8 @@ padding-bottom: 0;
 -ms-overflow-style: none; /* hides the scrollbars for Internet Explorer on the panel */
 }
 
-.mask{
-background: rgba(0,0,0,0.62);
+.nifty-mask{
+background: $mask-color;
 height: 100%;
 width: 100%;
 z-index: 9998;
@@ -38,7 +54,7 @@ opacity: 0;
 }
 
 //animated hamburger styles
-#nav-toggle{
+#nifty-nav-toggle{
 width: 30px;
 height: 40px;
 display: block;
@@ -49,43 +65,44 @@ right: 0px;
 transition: all .3s ease;
 }
 
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+#nifty-nav-toggle span, #nifty-nav-toggle span:before, #nifty-nav-toggle span:after {
 cursor: pointer;
 border-radius: 1px;
 height: 3px;
 width: 30px;
-background: rgb(171,171,171);
+background: $hamburger-color;
 position: absolute;
 top: 21px;
 right: 0px;
 display: block;
 content: '';
 }
-#nav-toggle span:before {
+#nifty-nav-toggle span:before {
 top: -8px;
 }
-#nav-toggle span:after {
+#nifty-nav-toggle span:after {
 bottom: -8px;
 top: 8px; 
 }
 
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+// this is where the animation magic happens
+#nifty-nav-toggle span, #nifty-nav-toggle span:before, #nifty-nav-toggle span:after {
 transition: all 500ms ease-in-out;
 }
-#nav-toggle.active span {
+#nifty-nav-toggle.nifty-active span {
 background-color: transparent;
 }
-#nav-toggle.active span:before, #nav-toggle.active span:after {
+#nifty-nav-toggle.nifty-active span:before, #nifty-nav-toggle.nifty-active span:after {
 top: 0;
 }
-#nav-toggle.active span:before {
+#nifty-nav-toggle.nifty-active span:before {
 transform: rotate(45deg);
 -webkit-transform: rotate(45deg);
 }
-#nav-toggle.active span:after {
+#nifty-nav-toggle.nifty-active span:after {
 transform: rotate(-45deg);
 -webkit-transform: rotate(-45deg);
 }
-#nav-toggle:hover{
+#nifty-nav-toggle:hover{
 opacity: .5;
 }
