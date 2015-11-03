@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
-		<link rel="stylesheet" href="../dist/css/f1-nav.min.css" type="text/css">
+		<link rel="stylesheet" href="../dist/css/nifty-nav.min.css" type="text/css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		
 	</head>
@@ -67,6 +67,10 @@
 			padding: 19px 4px 0;
 		}
 		
+		.nifty-panel ul li .sub-menu{
+			display: none;
+		}
+		
 		@media screen and (max-width: 40em){
 			.nifty-panel ul li{
 				display: block;
@@ -81,7 +85,14 @@
 			<div class="row">
 				<div class="small-12 medium-12 medium-centered columns">
 					<ul>
-						<li class="nifty-nav-item"><a href="#empire">The Empire Strikes Back</a></li>
+						<li><a href="#">The Empire Strikes Back - Has Children</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="">Link</a>
+									<a href="">Link</a>
+								</li>
+							</ul>
+						</li>
 						<li class="nifty-nav-item"><a href="#revenge">Revenge of the Sith</a></li>
 						<li class="nifty-nav-item"><a href="#force">The Force Unleashed</a></li>
 						<li class="nifty-nav-item"><a href="#attack">Attack of the Clones</a></li>
@@ -137,6 +148,6 @@
 			</div>
 		</div>
 		
-		<script src="../dist/js/f1-nav.min.js"></script>
+		<script src="../dist/js/nifty-nav.min.js"></script>
 	</body>
 </html>
