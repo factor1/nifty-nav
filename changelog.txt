@@ -2,6 +2,12 @@
 —— F1 Nav Change Log ——
 ////////////////////////
 
+VERSION 1.5 11/3/2015
+___________________________
+Version 1.5.0 adds sub menu toggles, as well as a complete overhaul of the file structure in preparation of bumping to 2.0.0 which will include a bower package for Nifty Nav.
+Note that most if not all of the class names have changed to avoid conflicts with Wordpress or other jQuery based plugins. 
+
+
 VERSION 1.4 12/19/2014
 ———————————————————————————
 Version 1.4 is siq. We added transitions to the mask (finally!) so that it looks nice and pretty on open, and if you’re using a one page layout, looks just as slick. 
