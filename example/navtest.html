@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
-		<link rel="stylesheet" href="css/f1-nav.css" type="text/css">
+		<link rel="stylesheet" href="../dist/css/nifty-nav.min.css" type="text/css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		
 	</head>
@@ -51,22 +51,28 @@
 		header{
 			padding: 13px 0;
 			font-size: 2em;
+			position: relative;
+			background: black;
 		}
 	
 		.content{
 			padding: 100px 0 0;
 		}
-		.panel ul{
+		.nifty-panel ul{
 			list-style: none;
 		}
-		.panel ul li{
+		.nifty-panel ul li{
 			display: inline-block;
 			text-align: center;
 			padding: 19px 4px 0;
 		}
 		
+		.nifty-panel ul li .sub-menu{
+			display: none;
+		}
+		
 		@media screen and (max-width: 40em){
-			.panel ul li{
+			.nifty-panel ul li{
 				display: block;
 				padding: 5px 0;
 				text-align: left;
@@ -75,15 +81,22 @@
 		}
 	</style>
 	<body class="f1-nav">
-		<div class="panel">
+		<div class="nifty-panel">
 			<div class="row">
 				<div class="small-12 medium-12 medium-centered columns">
 					<ul>
-						<li class="nav-item"><a href="#empire">The Empire Strikes Back</a></li>
-						<li class="nav-item"><a href="#revenge">Revenge of the Sith</a></li>
-						<li class="nav-item"><a href="#force">The Force Unleashed</a></li>
-						<li class="nav-item"><a href="#attack">Attack of the Clones</a></li>
-						<li class="nav-item"><a href="#sith">The Sith Lords</a></li>
+						<li><a href="#">The Empire Strikes Back - Has Children</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="">Link</a>
+									<a href="">Link</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nifty-nav-item"><a href="#revenge">Revenge of the Sith</a></li>
+						<li class="nifty-nav-item"><a href="#force">The Force Unleashed</a></li>
+						<li class="nifty-nav-item"><a href="#attack">Attack of the Clones</a></li>
+						<li class="nifty-nav-item"><a href="#sith">The Sith Lords</a></li>
 					</ul>
 				</div>
 			</div>
@@ -96,7 +109,7 @@
 					<span class="factor1">factor1</span><span class="tag"> nav, it's for websites!</span>
 				</div>
 				<div class="small-4 medium-2 columns">
-					<a id="nav-toggle" class="mm_open"><span></span></a>
+					<a id="nifty-nav-toggle" class="mm_open"><span></span></a>
 				</div>
 			</div>
 		</header>
@@ -134,7 +147,7 @@
 				<p>Remember, a Jedi can feel the Force flowing through him. Don't underestimate the Force. You're all clear, kid. Let's blow this thing and go home! Dantooine. They're on Dantooine. You are a part of the Rebel Alliance and a traitor! Take her away! What?!</p>
 			</div>
 		</div>
-		<script src="f1-nav.js"></script>
-
+		
+		<script src="../dist/js/nifty-nav.min.js"></script>
 	</body>
 </html>

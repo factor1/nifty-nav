@@ -2,7 +2,7 @@
   "name": "nifty-nav",
   "version": "1.5.0",
   "description": "A handy dandy jQuery plugin that allows your navigation to slide up or down.",
-  "main": "js/f1-nav.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
