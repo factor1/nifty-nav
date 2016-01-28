@@ -1,8 +1,8 @@
 /* Nifty Nav
- * Author: Eric Stout / Factor1
- * http://factor1studios.com
- * Repo: https://github.com/factor1/nifty-nav
- */
+* Author: Eric Stout / Factor1
+* http://factor1studios.com
+* Repo: https://github.com/factor1/nifty-nav
+*/
 
 // function we use to remove the mask
 var niftyRemove = function(){
@@ -20,27 +20,20 @@ var $mobileClicked;
 
 // when the document is ready lets go!
 $(document).ready(function(){
-
 	i = 0;
-
 	// listen for the click on the menu icon
 	$('#nifty-nav-toggle').click(function(){
-
 		// Add 1 to the count
 		i++;
-
 		$('#nifty-nav-toggle').toggleClass('nifty-active');
-
 		// toggle the nav up/down
 		$('.nifty-panel').slideToggle(500).css("position", "absolute");
-
 		// Check if the counter is even or odd
 		var isEven = function(clickCounter){
 			return (clickCounter%2 === 0) ? true : false;
 		};
 
 		if (isEven(i) === false){
-
 			//lets create a nice mask to dim the content
 			$('body').append('<div class="nifty-mask"></div>');
 			$('.nifty-mask').animate({opacity:1.0});
@@ -48,40 +41,25 @@ $(document).ready(function(){
 			niftyUnMaskIt();
 		}
 
-		// or alternatively you can click the mask and make that shit go away.
+		// mask click collapses the nav
 		$('.nifty-mask').click(function(){
-
 			//slide up the nav panel
 			$('.nifty-panel').slideUp(500);
-
 			//remove the mask
 			niftyUnMaskIt();
-
 			// remove the active class on the hamburger mmmm hamburger
 			$('#nifty-nav-toggle').removeClass('nifty-active');
-
 			i++;  // Add 1 to the count
 		});
-
 	});
-	// close up our listener for nav toggle
-
-
-
-	/*
-	Oh snap! You want to close the menu when clicking a nav-item?
-	We got you... this is usefull when your site is a single page layout
-	and you want to jump down to an anchor tag instead of a different page.
-	*/
+	// Close the nav when a nav item is clicked
 	$('.nifty-nav-item').click(function(){
-
 		//slide up our panel
 		$('.nifty-panel').slideUp(500);
 		niftyUnMaskIt();
 		$('#nifty-nav-toggle').removeClass('nifty-active');
 		i = 0;  // reset the counter
 	});
-
 
 	/*
 	Listen for any menu items that have children and allow them
@@ -94,5 +72,4 @@ $(document).ready(function(){
 		$mobileClicked.find('.sub-menu').slideToggle();
 		$mobileClicked.find('a').toggleClass('menu-opened');
 	});
-
 });
