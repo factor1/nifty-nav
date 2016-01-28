@@ -13,7 +13,9 @@ Nifty Nav is available via `bower` and `npm` or by cloning the repo via Git. To
 install with the package managers:
 
 `bower install nifty-nav --save`
+
 or
+
 `npm install nifty-nav --save`
 
 Once you have the Nifty Nav files in place, be sure to include the styles in your main `scss`
@@ -56,20 +58,20 @@ on the `li` or `a` element. This can be useful for single page layouts. For exam
 
 ```html
 <nav>
-    <ul>
-      <li class=“nifty-nav-item”>
-	    	<a href=“#”>Home</a>
-			</li>
-			<li class=“nifty-nav-item”>
-			  <a href=“#”>Portfolio</a>
-			</li>
-			<li class=“nifty-nav-item”>
-			  <a href=“#”>About Us</a>
-			</li>
-			<li class=“nifty-nav-item”>
-			  <a href=“#”>Contact</a>
-			</li>
-    </ul>
+	<ul>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>Home</a>
+		</li>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>Portfolio</a>
+		</li>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>About Us</a>
+		</li>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>Contact</a>
+		</li>
+	</ul>
 </nav>
 ```
 ### Toggling Sub Menus ###
