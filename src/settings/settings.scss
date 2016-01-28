@@ -1,0 +1,18 @@
+// Easily set your styles here using sass variables
+
+// panel options
+$panel-color: rgb(229, 229, 229);
+$panel-top-distance: 76px;
+
+// mask options
+$mask-color:	rgba(0,0,0,0.62);
+
+// hamburger options
+$hamburger-color: rgb(171,171,171);
+$hamburger-color-active: rgb(171,171,171);
+
+$hamburger-position-top: 15px !default;
+$hamburger-position-x: 15px !default;
+
+// if false, hamburger will sit to the right instead of the left
+$hamburger-position-left: 'true' !default;
