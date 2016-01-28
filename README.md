@@ -1,93 +1,82 @@
-# F1 NAV #
+# Nifty Nav #
 
-A SWEET JQUERY TOOL WRITTEN BY MATT ADAMS (@mattada) AND ERIC STOUT (@buschschwick). SIMPLE, EASY TO USE, AND FULL OF SURPRISES.
+Nifty Nav is a sweet navigation tool using scss and jQuery to make mobile menus
+a little bit better.
 
 HTTP://FACTOR1STUDIOS.COM
 
-**VERSION 1.5.0 10/29/2015**
+**VERSION 1.6.0 01/28/2016**
 
-## TABLE OF CONTENTS ##
-1. PANEL
-2. MASK
-3. MASK DEFAULT CSS STYLES
-4. PANEL DEFAULT CSS STYLES
-5. CLOSING THE NAV WITH NAV ITEMS
-6. FUTURE UPDATES & RAMBLINGS
-7. TOGGLING CHILDREN MENUS
-7. BUGS AND TIPS
+## Installing Nifty Nav ##
+### Recommended Setup ###
+Nifty Nav is available via `bower` and `npm` or by cloning the repo via Git. To
+install with the package managers:
 
+`bower install nifty-nav --save`
 
-###1 - Panel	
-The panel is where your menu, options, whatever… will live. You must include a .panel class in your stylesheet for it to properly function. Not much more to say about that.
+or
 
+`npm install nifty-nav --save`
 
+Once you have the Nifty Nav files in place, be sure to include the styles in your main `scss`
+file. The settings file must be included first. For example:
 
-###2- Mask
-The mask throws a DIV overlay on the body to dim the content from the user to bring focus to the menu. This must include the .mask class in the stylesheet to work correctly. Feel free to modify the style, but always leave the z-index lower then the .panel class!
-
-###3- Mask Default CSS Styles
-This is the default CSS style for the mask that covers the entire window. Reminder: the z-index can be whatever you want as long as it’s less then the z-index of the panel.
-
-```css
-.mask{
-	background: rgba(0,0,0,0.42);  //You can change this to your liking
-	height: 100%;
-	width: 100%;   // these just cover the entire screen, so leave it, dingus
-	z-index: 9998;
-	position: fixed;
-	top:0;  // Leave this at 0 to avoid it from pushing with the content.	
-}
+```scss
+@import 'nifty-nav/scss/nifty-nav';
+@import 'nifty-nav/settings/settings';
 ```
-###4- Panel Default CSS Styles
-This is the default and minimum for the .panel styles. Again, the panel is where you off canvas content will live. 
 
-```css
-.panel{
-	position: absolute;
-	width: 100%; 
-	top: 0;         // keeps the panel up at the top
-	display: none;
-	-ms-overflow-style:none;  //this disables scrollbars in Internet Explorer
-	z-index: 9999;  // this is important. it can be whatever you want as long as its over you content and above the mask
-	-webkit-overflow-scrolling: touch;
-}
+Be sure to include `nifty-nav.js` in your workflow/tasks as well.
 
-```
-###5- Closing the NAV with Nav Items
+### Quick Setup ###
+Download / Clone via Git and include the files found in `nifty-nav/dist`.
 
-You can choose to close the nav when clicking on the navigation items in the nav panel. Just place ‘nav-item’ on the LI or A element. For example:
+In the `<head>`:
+`<link rel="stylesheet" href="css/nifty-nav.min.css">`
+
+Right before the closing `</body>` tag:
+`<script src="js/nifty-nav.min.js"></script>`
+
+##Adding the Hamburger
+Adding the hamburger to your site is pretty straight forward. Just add the following:
 
 ```html
+<a id="nifty-nav-toggle"><span></span></a>
+```
 
+## Nifty Nav Components ##
+
+* Panel
+	The panel is where your content will live.
+* Mask
+	The mask throws a `<div>` overlay on the `<body>` to dim the content and bring focus to the menu.
+
+## Nifty Nav Features ##
+### Closing the panel with Nav Items ###
+You can choose to close the nav when clicking on the navigation items in the nav panel. Just place `nifty-nav-item`
+on the `li` or `a` element. This can be useful for single page layouts. For example:
+
+```html
 <nav>
-    <ul>
-        <li class=“nav-item”>
-	    <a href=“#”>Home</a>
-	</li>
-	<li class=“nav-item”>
-	    <a href=“#”>Portfolio</a>
-	</li>
-	<li class=“nav-item”>
-	    <a href=“#”>About Us</a>
-	</li>
-	<li class=“nav-item”>
-	     <a href=“#”>Contact</a>
-	</li>
-    </ul>
+	<ul>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>Home</a>
+		</li>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>Portfolio</a>
+		</li>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>About Us</a>
+		</li>
+		<li class=“nifty-nav-item”>
+			<a href=“#”>Contact</a>
+		</li>
+	</ul>
 </nav>
-
 ```
+### Toggling Sub Menus ###
+Nifty Nav allows for toggling of sub menus based off of the WordPress menu structure. The script looks for a `ul` inside of `.nifty-panel` and if it has a child that has the class `.sub-menu` it will toggle its display property. It will add a class of `.menu-opened` which will allow you to style it when the parent `ul` is "opened". By default `.menu-opened` has no styles.
 
-###6- Adding the Hamburger
-Adding the hamburger to your site is pretty straight forward. Just add the following, and edit any CSS as needed for placement.
-
-```html
-<a id="nav-toggle" class="mm_open"><span></span></a>
-```
-
-###7-Toggling sub-menus
-Version 1.5.0 brings sub-menu toggling based off of the Wordpress menu structure. Basically what the JS does is look for a `ul` inside of `.panel` and if it has a child that has the class `.sub-menu` it will toggle its display property. It will add a class of `.menu-opened` which will allow you to style it when the parent ul is "opened". By default `.menu-opened` has no styles. 
-
-###8- Bugs and Tips
-* Don't want the nav to push down the body content? That's fine... just move the <div> containing 'panel' wherever you want the drop down to originate from and play with the positioning of the item in the JS/CSS file. 
-* Feel free to open an issue if you run into any problems while using Nifty Nav. 
+#Issues / Bugs / Contributions#
+If you have feedback, find a bug, or want to make contributions, please don't hesitate
+to open an issue or make a pull request.
