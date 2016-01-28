@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/factor1/nifty-nav#readme",
   "devDependencies": {
+    "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^1.12.0",

@@ -4,6 +4,8 @@ By Eric Stout / Factor1
 http://factor1studios.com
 */
 
+//@import '../settings/settings';
+// only use when compiling css
 
 header{
   z-index: 9999;
@@ -12,15 +14,15 @@ header{
 .nifty-panel{
   position: relative;
   width: $panel-width;
-  border: 0 !default;
-  padding: 0 !default;
+  border: 0;
+  padding: 0;
   background: $panel-color;
   top: $panel-top-distance;
   display: none;
   z-index: 9999;
   overflow: scroll;
-  margin-bottom: 0 !default;
-  padding-bottom: 0 !default;
+  margin-bottom: 0;
+  padding-bottom: 0;
   -ms-overflow-style: none; /* hides the scrollbars for Internet Explorer on the panel */
 }
 
