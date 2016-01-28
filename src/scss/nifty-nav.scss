@@ -11,17 +11,16 @@ header{
 
 .nifty-panel{
   position: relative;
-  width: 100%;
-  border: 0px;
-  padding: 0;
+  width: $panel-width;
+  border: 0 !default;
+  padding: 0 !default;
   background: $panel-color;
-  color: white;
   top: $panel-top-distance;
   display: none;
   z-index: 9999;
   overflow: scroll;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 0 !default;
+  padding-bottom: 0 !default;
   -ms-overflow-style: none; /* hides the scrollbars for Internet Explorer on the panel */
 }
 
@@ -63,9 +62,11 @@ header{
   display: block;
   content: '';
 }
+
 #nifty-nav-toggle span:before {
   top: -8px;
 }
+
 #nifty-nav-toggle span:after {
   bottom: -8px;
   top: 8px;
