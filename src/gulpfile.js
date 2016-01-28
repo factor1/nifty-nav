@@ -1,12 +1,12 @@
 // Include gulp
-var gulp = require('gulp'); 
+var gulp = require('gulp');
 
 // Include Our Plugins
 var clean = require('gulp-clean');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');	
+var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
 
 // Clean Dist Folder
@@ -54,18 +54,11 @@ gulp.task('watch', function() {
     //gulp.watch('css/src/*.css', ['minify-css']);
 });
 
-// Default Task
-gulp.task('default', ['clean','lint', 'sass', 'scripts', 'watch']);
-
-// Minimize CSS
-/*
-gulp.task('minify-css', function() {
-  return gulp.src('css/src/*.css')
-    .pipe(minifyCss({
-	    compatibility: 'ie8',
-	    aggressiveMerging: false,
-	    processImport: true
-	    }))
-    .pipe(gulp.dest('css/'));
+// Copy ReadMe
+gulp.task('readme', function(){
+	return gulp.src('../README.md')
+		.pipe(gulp.dest('./'));
 });
-*/
+
+// Default Task
+gulp.task('default', ['clean','lint', 'sass', 'scripts', 'readme', 'watch']);
