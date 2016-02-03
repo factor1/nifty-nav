@@ -41,6 +41,6 @@ function niftyNav(){
         });
       }
     }
-
   })
+
 };
