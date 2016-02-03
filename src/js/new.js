@@ -4,10 +4,13 @@ function niftyNav(){
   $nifty_toggle = $('#nifty-nav-toggle');
   $nifty_panel = $('.nifty-panel');
   $nifty_mask = $('.nifty-mask');
+  $nifty_nav_item = $('.nifty-nav-item');
+  $nifty_parent = $('.nifty-panel ul li');
 
   // Settings
-  sub_menu_collapse = true;
+  sub_menus = true;
   use_mask = true;
+  item_click_close = true;
 
   // Core Nifty Nav Functions
   niftyRemove = function(){
@@ -21,7 +24,8 @@ function niftyNav(){
 
   // on nifty nav toggle click
   $nifty_toggle.click(function(){
-    this.toggleClass('nifty-active');
+    var $this = $(this);
+    $this.toggleClass('nifty-active');
     $nifty_panel.slideToggle(500).css('position','absolute');
 
     if( use_mask === true){
@@ -43,4 +47,27 @@ function niftyNav(){
     }
   })
 
+  // close nifty nav on nav item click
+  if( item_click_close === true ){
+    $nifty_nav_item.click(function(){
+      $nifty_panel.slideUp(500);
+      niftyUnmask();
+      $nifty_toggle.removeClass('nifty-active');
+    });
+  }
+
+  // if sub menus are enabled
+  if( sub_menus === true ){
+    var $nifty_parent_active;
+    $nifty_parent.click(function(){
+      $nifty_parent_active = $(this);
+      $nifty_parent_active.find('.sub-menu').slideToggle();
+      $nifty_parent_active.find('a').toggleClass('nifty-menu-opened');
+    });
+  }
+
 };
+
+$(document).ready(function(){
+  niftyNav();
+});
