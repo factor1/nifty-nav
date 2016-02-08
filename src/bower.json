@@ -1,6 +1,6 @@
 {
   "name": "nifty-nav",
-  "description": "A handy dandy jQuery plugin that allows your navigation to slide up or down.",
+  "description": "Nifty Nav is a quick and easy navigation plugin using Sass and jQuery. It makes making navigation systems a little better.",
   "main": "nifty-nav.js",
   "authors": [
     "Eric Stout / Factor1 <eric@factor1studios.com>"
