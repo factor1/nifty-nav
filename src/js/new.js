@@ -16,7 +16,7 @@
 
     sub_menus         = settings.sub_menus;
     use_mask          = settings.use_mask;
-    item_click_close  = settings.use_mask;
+    item_click_close  = settings.item_click_close;
 
 
     // Core Nifty Nav Functions
@@ -74,8 +74,3 @@
     }
 
   };
-
-
-$(document).ready(function(){
-  niftyNav();
-});
