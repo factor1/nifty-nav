@@ -22,8 +22,8 @@ Once you have the Nifty Nav files in place, be sure to include the styles in you
 file. The settings file must be included first. For example:
 
 ```scss
-@import 'nifty-nav/settings/settings';
 @import 'nifty-nav/scss/nifty-nav';
+@import 'nifty-nav/settings/settings';
 ```
 
 Be sure to include `nifty-nav.js` in your workflow/tasks as well.
