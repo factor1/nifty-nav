@@ -1,0 +1,29 @@
+{
+  "name": "nifty-nav",
+  "description": "Nifty Nav is a quick and easy navigation plugin using Sass and jQuery. It makes making navigation systems a little better.",
+  "main": "nifty-nav.js",
+  "authors": [
+    "Eric Stout / Factor1 <eric@factor1studios.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Navigation",
+    "Mobile",
+    "Navigation",
+    "Nav",
+    "Mobile",
+    "Nav",
+    "Nifty",
+    "Nav",
+    "factor1"
+  ],
+  "homepage": "https://github.com/factor1/nifty-nav",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
