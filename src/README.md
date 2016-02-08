@@ -1,107 +1,100 @@
-# Nifty Nav #
+# Nifty Nav
+Nifty Nav is a quick and easy navigation plugin using Sass and jQuery. It makes
+making navigation systems a little better. Built by the awesome people over at [factor1](http://factor1studios.com).
 
-Nifty Nav is a sweet navigation tool using Sass and jQuery to make mobile menus
-a little bit better.
+## Getting Started
 
-[Built by factor1](http://factor1studios.com)
+##### 1. Install Nifty Nav with `npm` or `bower`
 
-## Installing Nifty Nav ##
-### Recommended Setup ###
-Nifty Nav is available via `bower` and `npm` or by cloning the repo via Git. To
-install with  package managers:
-
-`bower install nifty-nav --save`
-
-or
-
-`npm install nifty-nav --save`
-
-Once you have the Nifty Nav files in place, be sure to include the styles in your main `scss`
-file. The settings file must be included first. For example:
-
-```scss
-@import 'nifty-nav/settings';
-@import 'nifty-nav/nifty-nav';
+```
+npm install nifty-nav --save
+## OR
+bower install nifty-nav --save
 ```
 
-Be sure to include `nifty-nav.js` in your workflow/tasks as well.
+##### 2. Import the Nifty Nav styles & settings in your `.scss` file
 
-### Quick Setup ###
-Download / Clone via Git and include the files found in `nifty-nav/dist`.
+To use the default settings:
 
-In the `<head>`:
-`<link rel="stylesheet" href="css/nifty-nav.min.css">`
+```scss
+@import nifty-nav/settings;
+@import nifty-nav/nifty-nav;
+```
 
-Right before the closing `</body>` tag:
-`<script src="js/nifty-nav.min.js"></script>`
+To customize the settings, copy `settings.scss` to your project folder and include
+it before `nifty-nav`. This example moves `settings.scss` to a folder called
+`settings` and renames it to `nifty-nav-settings`:
 
-##Adding the Hamburger
-Adding the hamburger to your site is pretty straight forward. Just add the following:
+```scss
+@import settings/nifty-nav-settings;
+@import nifty-nav/nifty-nav;
+```
+
+##### 3. Include the `nifty-nav.js`
+Include the `nifty-nav.js` in your build either inline or within a Gulp or Grunt
+task.
+
+### Quick Setup
+To use Nifty Nav without compiling and with the default settings, clone the Nifty Nav repo and use
+`nifty-nav.min.css` found in `dist/css/` and `nifty-nav.min.js` found in `dist/js/`.
+
+```html
+<html>
+  <head>
+    <link rel="stylesheet" href="path/to/file/nifty-nav.min.css">
+  </head>
+  <body>
+   ...
+   <script src="path/to/file/nifty-nav.min.js"></script>
+  </body>
+</html>
+```
+
+## Adding The Hamburger
+To add the hamburger to your site:
 
 ```html
 <a id="nifty-nav-toggle"><span></span></a>
 ```
 
-## Nifty Nav Components ##
+## Nifty Nav Options/Settings
+Nifty Nav has three `jQuery` settings, and some `scss` settings.
 
-* Panel
-	The panel is where your content will live.
-* Mask
-	The mask throws a `<div>` overlay on the `<body>` to dim the content and bring focus to the menu.
+- `subMenus` controls if Nifty Nav should allow toggling of sub-menus. Default: `false`.
+- `mask` controsl if Nifty Nav should show the mask that covers the page. Default: `true`.
+- `itemClickClose` controls if Nifty Nav should close when a nav item with the class of `nifty-nav-item`
+is clicked. Default: `true`.
 
-## Nifty Nav Features ##
-### Closing the panel with Nav Items ###
-You can choose to close the nav when clicking on the navigation items in the nav panel. Just place a class of `nifty-nav-item`
-on the `li` or `a` element. This can be useful for single page layouts. For example:
+`Scss` settings control visual aspects of nifty nav:
 
-```html
-<nav>
-	<ul>
-		<li class=“nifty-nav-item”>
-			<a href=“#”>Home</a>
-		</li>
-		<li class=“nifty-nav-item”>
-			<a href=“#”>Portfolio</a>
-		</li>
-		<li class=“nifty-nav-item”>
-			<a href=“#”>About Us</a>
-		</li>
-		<li class=“nifty-nav-item”>
-			<a href=“#”>Contact</a>
-		</li>
-	</ul>
-</nav>
-```
-### Toggling Sub Menus ###
-Nifty Nav allows for toggling of sub menus based off of the WordPress menu structure. The script looks for a `ul` inside of `.nifty-panel` and if it has a child that has the class `.sub-menu` it will toggle its display property. It will add a class of `.menu-opened` which will allow you to style it when the parent `ul` is "opened". By default `.menu-opened` has no styles.
-
-### Nifty Nav Options ###
-Nifty Nav has 3 settings/options. `use_mask`, `sub_menus`, & `item_click_close`. By default the settings are:
-
-```
-use_mask: true
-sub_menus: false
-item_click_close: true
-```
-
-If you wanted to turn off the mask, for instance, it would look like this:
-
-```js
-$(document).ready(function(){
-	niftyNav({
-		use_mask: false
-	})
-});
-```
+- `$panel-color` sets the color of the dropdown.
+- `$panel-top-distance` sets the panel distance from the top of the viewport.
+- `$panel-width` sets the panel width.
+- `$mask-color` sets the color and opacity of the mask.
+- `$hamburger-color` sets the hamburger color.
+- `$hamburger-color-active` sets the color of the hamburger when the panel is open.
+- `$hamburger-position-top` sets the distance from the top of the containing element.
+- `$hamburger-position-x` sets the distance from the left/right of the containing element.
+- `$hamburger-position-left` - default is `true`. If false, the hamburger floats to the right.
 
 ## Initializing Nifty Nav
 To use Nifty Nav, initialize it at the bottom of your page before the closing `</body>` or in an external JavaScript file (reccomended).
 
 ```js
+// Nifty Nav with default settings
 $(document).ready(function(){
 	niftyNav();
 });
+
+// Nifty Nav without the mask and with sub-menu toggles
+$(document).ready(function(){
+  niftyNav({
+    mask: false,
+    subMenus: true
+  });
+});
 ```
+
 
 #Issues / Bugs / Contributions#
 If you have feedback, find a bug, or want to make contributions, please don't hesitate

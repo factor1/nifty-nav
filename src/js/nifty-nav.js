@@ -12,14 +12,14 @@ var niftyNav = function(options){
 
   var settings = $.extend({
     // These are the defaults.
-    sub_menus: false,
-    use_mask: true,
-    item_click_close: true
+    subMenus: false,
+    mask: true,
+    itemClickClose: true
   }, options );
 
-  sub_menus         = settings.sub_menus;
-  use_mask          = settings.use_mask;
-  item_click_close  = settings.item_click_close;
+  subMenus        = settings.subMenus;
+  mask            = settings.mask;
+  itemClickClose  = settings.itemClickClose;
 
 
   // Core Nifty Nav Functions
@@ -38,7 +38,7 @@ var niftyNav = function(options){
     $this.toggleClass('nifty-active');
     $nifty_panel.slideToggle(500).css('position','absolute');
 
-    if( use_mask === true){
+    if( mask === true){
       // if a mask exists
       if( $('.nifty-mask').length > 0 ){
         niftyUnmask();
@@ -58,7 +58,7 @@ var niftyNav = function(options){
   });
 
   // close nifty nav on nav item click
-  if( item_click_close === true ){
+  if( itemClickClose === true ){
     $nifty_nav_item.click(function(){
       $nifty_panel.slideUp(500);
       niftyUnmask();
@@ -67,7 +67,7 @@ var niftyNav = function(options){
   }
 
   // if sub menus are enabled
-  if( sub_menus === true ){
+  if( subMenus === true ){
     var $nifty_parent_active;
     $nifty_parent.click(function(){
       $nifty_parent_active = $(this);
