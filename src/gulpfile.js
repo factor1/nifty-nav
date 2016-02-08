@@ -56,7 +56,7 @@ gulp.task('watch', function() {
 
 // Copy ReadMe
 gulp.task('readme', function(){
-	return gulp.src('../README.md')
+	return gulp.src('./src/README.md')
 		.pipe(gulp.dest('./'));
 });
 
