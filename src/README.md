@@ -1,16 +1,14 @@
 # Nifty Nav #
 
-Nifty Nav is a sweet navigation tool using scss and jQuery to make mobile menus
+Nifty Nav is a sweet navigation tool using Sass and jQuery to make mobile menus
 a little bit better.
 
-HTTP://FACTOR1STUDIOS.COM
-
-**VERSION 1.6.0 01/28/2016**
+[Built by factor1](http://factor1studios.com)
 
 ## Installing Nifty Nav ##
 ### Recommended Setup ###
 Nifty Nav is available via `bower` and `npm` or by cloning the repo via Git. To
-install with the package managers:
+install with  package managers:
 
 `bower install nifty-nav --save`
 
@@ -22,8 +20,8 @@ Once you have the Nifty Nav files in place, be sure to include the styles in you
 file. The settings file must be included first. For example:
 
 ```scss
-@import 'nifty-nav/settings/settings';
-@import 'nifty-nav/scss/nifty-nav';
+@import 'nifty-nav/settings';
+@import 'nifty-nav/nifty-nav';
 ```
 
 Be sure to include `nifty-nav.js` in your workflow/tasks as well.
@@ -53,7 +51,7 @@ Adding the hamburger to your site is pretty straight forward. Just add the follo
 
 ## Nifty Nav Features ##
 ### Closing the panel with Nav Items ###
-You can choose to close the nav when clicking on the navigation items in the nav panel. Just place `nifty-nav-item`
+You can choose to close the nav when clicking on the navigation items in the nav panel. Just place a class of `nifty-nav-item`
 on the `li` or `a` element. This can be useful for single page layouts. For example:
 
 ```html
@@ -76,6 +74,34 @@ on the `li` or `a` element. This can be useful for single page layouts. For exam
 ```
 ### Toggling Sub Menus ###
 Nifty Nav allows for toggling of sub menus based off of the WordPress menu structure. The script looks for a `ul` inside of `.nifty-panel` and if it has a child that has the class `.sub-menu` it will toggle its display property. It will add a class of `.menu-opened` which will allow you to style it when the parent `ul` is "opened". By default `.menu-opened` has no styles.
+
+### Nifty Nav Options ###
+Nifty Nav has 3 settings/options. `use_mask`, `sub_menus`, & `item_click_close`. By default the settings are:
+
+```
+use_mask: true
+sub_menus: false
+item_click_close: true
+```
+
+If you wanted to turn off the mask, for instance, it would look like this:
+
+```js
+$(document).ready(function(){
+	niftyNav({
+		use_mask: false
+	})
+});
+```
+
+## Initializing Nifty Nav
+To use Nifty Nav, initialize it at the bottom of your page before the closing `</body>` or in an external JavaScript file (reccomended).
+
+```js
+$(document).ready(function(){
+	niftyNav();
+});
+```
 
 #Issues / Bugs / Contributions#
 If you have feedback, find a bug, or want to make contributions, please don't hesitate
