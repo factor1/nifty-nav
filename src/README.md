@@ -64,6 +64,7 @@ Nifty Nav has three `jQuery` settings, and some `scss` settings.
 - `mask` controsl if Nifty Nav should show the mask that covers the page. Default: `true`.
 - `itemClickClose` controls if Nifty Nav should close when a nav item with the class of `nifty-nav-item`
 is clicked. Default: `true`.
+- `panelPosition` lets you control the `display:` value of the `.nifty-panel` element. Default: `absolute`.
 
 `Scss` settings control visual aspects of nifty nav:
 
@@ -96,6 +97,6 @@ $(document).ready(function(){
 ```
 
 
-#Issues / Bugs / Contributions#
+# Issues / Bugs / Contributions#
 If you have feedback, find a bug, or want to make contributions, please don't hesitate
 to open an issue or make a pull request.
