@@ -71,6 +71,10 @@ var niftyNav = function(options){
   // if sub menus are enabled
   if( subMenus === true ){
     var $nifty_parent_active;
+    $('.menu-item-has-children > a').click(function(event){
+      event.preventDefault();
+    });
+
     $nifty_parent.click(function(){
       $nifty_parent_active = $(this);
       $nifty_parent_active.find('.sub-menu').slideToggle();
