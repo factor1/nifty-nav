@@ -58,10 +58,11 @@ To add the hamburger to your site:
 ```
 
 ## Nifty Nav Options/Settings
-Nifty Nav has three `jQuery` settings, and some `scss` settings.
+Nifty Nav has five `jQuery` settings, and some `scss` settings.
 
 - `subMenus` controls if Nifty Nav should allow toggling of sub-menus. Default: `false`.
-- `mask` controsl if Nifty Nav should show the mask that covers the page. Default: `true`.
+- `subMenuParentLink` controls if a parent menu navigation link should be followed when clicked. Default: `false`.
+- `mask` controls if Nifty Nav should show the mask that covers the page. Default: `true`.
 - `itemClickClose` controls if Nifty Nav should close when a nav item with the class of `nifty-nav-item`
 is clicked. Default: `true`.
 - `panelPosition` lets you control the `display:` value of the `.nifty-panel` element. Default: `absolute`.
@@ -79,7 +80,7 @@ is clicked. Default: `true`.
 - `$hamburger-position-left` - default is `true`. If false, the hamburger floats to the right.
 
 ## Initializing Nifty Nav
-To use Nifty Nav, initialize it at the bottom of your page before the closing `</body>` or in an external JavaScript file (reccomended).
+To use Nifty Nav, initialize it at the bottom of your page before the closing `</body>` or in an external JavaScript file (recommended).
 
 ```js
 // Nifty Nav with default settings
