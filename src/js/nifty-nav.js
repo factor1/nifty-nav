@@ -2,6 +2,7 @@
 * Author: Eric Stout / Factor1
 * http://factor1studios.com
 * Repo: https://github.com/factor1/nifty-nav
+* Version: 2.1.3
 */
 
 var niftyNav = function(options){
@@ -15,13 +16,15 @@ var niftyNav = function(options){
     subMenus: false,
     mask: true,
     itemClickClose: true,
-    panelPosition:  'absolute'
+    panelPosition:  'absolute',
+    subMenuParentLink:  false
   }, options );
 
-  subMenus        = settings.subMenus;
-  mask            = settings.mask;
-  itemClickClose  = settings.itemClickClose;
-  panelPosition   = settings.panelPosition;
+  subMenus          = settings.subMenus;
+  mask              = settings.mask;
+  itemClickClose    = settings.itemClickClose;
+  panelPosition     = settings.panelPosition;
+  subMenuParentLink = settings.subMenuParentLink;
 
 
   // Core Nifty Nav Functions
@@ -71,9 +74,12 @@ var niftyNav = function(options){
   // if sub menus are enabled
   if( subMenus === true ){
     var $nifty_parent_active;
-    $('.menu-item-has-children > a').click(function(event){
-      event.preventDefault();
-    });
+    // if subMenuParentLink is false
+    if( subMenuParentLink === false ){
+      $('.menu-item-has-children > a').click(function(event){
+        event.preventDefault();
+      });
+    }
 
     $nifty_parent.click(function(){
       $nifty_parent_active = $(this);
