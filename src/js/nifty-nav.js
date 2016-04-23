@@ -76,7 +76,7 @@ var niftyNav = function(options){
     var $nifty_parent_active;
     // if subMenuParentLink is false
     if( subMenuParentLink === false ){
-      $('.menu-item-has-children > a').click(function(event){
+      $('.nifty-panel .menu-item-has-children > a').click(function(event){
         event.preventDefault();
       });
     }
