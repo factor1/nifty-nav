@@ -1,6 +1,6 @@
 {
   "name": "nifty-nav",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Nifty Nav is a quick and easy navigation plugin using Sass and jQuery. It makes making navigation systems a little better.",
   "main": "nifty-nav.js",
   "scripts": {
