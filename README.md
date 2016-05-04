@@ -69,10 +69,13 @@ is clicked. Default: `true`.
 
 `Scss` settings control visual aspects of nifty nav:
 
+- `$header-index` sets the z-index of the `<header>` element
 - `$panel-color` sets the color of the dropdown.
 - `$panel-top-distance` sets the panel distance from the top of the viewport.
 - `$panel-width` sets the panel width.
+- `$panel-index` sets the z-index of the Nifty Nav panel.
 - `$mask-color` sets the color and opacity of the mask.
+- `$mask-index` sets the z-index of the mask.
 - `$hamburger-color` sets the hamburger color.
 - `$hamburger-color-active` sets the color of the hamburger when the panel is open.
 - `$hamburger-position-top` sets the distance from the top of the containing element.
