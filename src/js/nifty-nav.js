@@ -2,7 +2,7 @@
 * Author: Eric Stout / Factor1
 * http://factor1studios.com
 * Repo: https://github.com/factor1/nifty-nav
-* Version: 2.1.3
+* Version: 2.1.5
 */
 
 var niftyNav = function(options){

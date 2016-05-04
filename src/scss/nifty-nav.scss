@@ -5,11 +5,11 @@ http://factor1studios.com
 */
 
 
-//@import 'settings/settings';
+//@import '../settings/settings';
 // only use when compiling css
 
 header{
-  z-index: 9999;
+  z-index: $header-index;
 }
 
 .nifty-panel{
@@ -20,7 +20,7 @@ header{
   background: $panel-color;
   top: $panel-top-distance;
   display: none;
-  z-index: 9999;
+  z-index: $panel-index;
   overflow: scroll;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -31,7 +31,7 @@ header{
   background: $mask-color;
   height: 100%;
   width: 100%;
-  z-index: 9998;
+  z-index: $mask-index;
   position: fixed;
   top:0;
   opacity: 0;
