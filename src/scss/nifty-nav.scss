@@ -106,3 +106,8 @@ header{
 #nifty-nav-toggle.nifty-active span:before, #nifty-nav-toggle.nifty-active span:after{
   background: $hamburger-color-active;
 }
+
+// Lock Body Class
+.nifty-lock{
+  overflow: hidden;
+}
