@@ -2,7 +2,7 @@
 * Author: Eric Stout / Factor1
 * http://factor1studios.com
 * Repo: https://github.com/factor1/nifty-nav
-* Version: 2.1.5
+* Version: 2.2.0
 */
 
 var niftyNav = function(options){
@@ -83,7 +83,7 @@ var niftyNav = function(options){
       if( panelPosition == 'fixed' ){
         $('body').removeClass('nifty-lock');
       }
-      
+
     });
   }
 
