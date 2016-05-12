@@ -2,7 +2,7 @@
 * Author: Eric Stout / Factor1
 * http://factor1studios.com
 * Repo: https://github.com/factor1/nifty-nav
-* Version: 2.1.5
+* Version: 2.2.0
 */
 
 var niftyNav = function(options){
@@ -43,6 +43,11 @@ var niftyNav = function(options){
     $this.toggleClass('nifty-active');
     $nifty_panel.slideToggle(500).css('position',panelPosition);
 
+    // if panelPosition is fixed
+    if( panelPosition == 'fixed' ){
+      $('body').toggleClass('nifty-lock');
+    }
+
     if( mask === true){
       // if a mask exists
       if( $('.nifty-mask').length > 0 ){
@@ -57,6 +62,11 @@ var niftyNav = function(options){
           $nifty_panel.slideUp(500);
           niftyUnmask();
           $nifty_toggle.removeClass('nifty-active');
+
+          // if panelPosition is fixed
+          if( panelPosition == 'fixed' ){
+            $('body').removeClass('nifty-lock');
+          }
         });
       }
     }
@@ -68,6 +78,12 @@ var niftyNav = function(options){
       $nifty_panel.slideUp(500);
       niftyUnmask();
       $nifty_toggle.removeClass('nifty-active');
+
+      // if panelPosition is fixed
+      if( panelPosition == 'fixed' ){
+        $('body').removeClass('nifty-lock');
+      }
+
     });
   }
 

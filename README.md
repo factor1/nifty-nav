@@ -67,6 +67,11 @@ Nifty Nav has five `jQuery` settings, and some `scss` settings.
 is clicked. Default: `true`.
 - `panelPosition` lets you control the `display:` value of the `.nifty-panel` element. Default: `absolute`.
 
+> **NOTE:**  When using `panelPosition: 'fixed'` a class of `.nifty-lock` is added
+> to the `<body>`. This is to prevent the page from scrolling and allow the user to scroll
+> through nav items instead. To change this functionality simply override the `.nifty-lock` class.
+
+
 `Scss` settings control visual aspects of nifty nav:
 
 - `$header-index` sets the z-index of the `<header>` element
