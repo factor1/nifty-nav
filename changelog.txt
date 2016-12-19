@@ -2,6 +2,10 @@
 —— F1 Nav Change Log ——
 ////////////////////////
 
+VERSION 2.2.1 12/19/2016
+___________________________
+Makes clickable area larger, updates dev devDependencies
+
 VERSION 2.1.4 04/23/2016
 ___________________________
 Fixes a "bug" that breaks parent nav items site wide. Thanks to @bebaps for pointing this out.
