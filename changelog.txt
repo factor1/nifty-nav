@@ -2,6 +2,10 @@
 —— F1 Nav Change Log ——
 ////////////////////////
 
+VERSION 2.2.2 12/22/2016
+___________________________
+Fixes toggle clickable area.
+
 VERSION 2.2.1 12/19/2016
 ___________________________
 Makes clickable area larger, updates dev devDependencies
