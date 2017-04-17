@@ -1,6 +1,6 @@
 {
   "name": "nifty-nav",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Nifty Nav is a quick and easy navigation plugin using Sass and jQuery. It makes making navigation systems a little better.",
   "main": "nifty-nav.js",
   "scripts": {
@@ -37,5 +37,16 @@
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
     "jshint": "^2.9.2"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "jshint": "^2.9.4"
   }
 }
