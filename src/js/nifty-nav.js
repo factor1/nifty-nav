@@ -2,7 +2,7 @@
 * Author: Eric Stout / Factor1
 * http://factor1studios.com
 * Repo: https://github.com/factor1/nifty-nav
-* Version: 2.3.0
+* Version: 2.3.1
 */
 
 (function ($) {
@@ -102,7 +102,7 @@
       $nifty_parent.click(function(){
         $nifty_parent_active = $(this);
         $nifty_parent_active.find('.sub-menu').slideToggle();
-        $nifty_parent_active.find('a').toggleClass('nifty-menu-opened');
+        $nifty_parent_active.toggleClass('nifty-menu-opened');
       });
     }
 
