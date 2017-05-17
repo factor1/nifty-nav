@@ -93,7 +93,7 @@ To use Nifty Nav, initialize it at the bottom of your page before the closing `<
 ```js
 // Nifty Nav with default settings
 $(document).ready(function(){
-	niftyNav();
+	$('#nifty-nav-toggle').niftyNav();
 });
 
 // Nifty Nav without the mask and with sub-menu toggles

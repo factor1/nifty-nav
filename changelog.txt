@@ -2,9 +2,18 @@
 —— F1 Nav Change Log ——
 ////////////////////////
 
-VERSION 2.4.0 05/17/2017
+
+VERSION 3.0.0 05/17/2017
 ___________________________
-Fixes toggle clickable area.
+Brings versions ~2.3.0 to 3.0.0 since it was a breaking change.
+
+VERSION 2.3.1 04/17/2017
+___________________________
+Hotfix to add class to correct LI instead of a per issue #21
+
+VERSION 2.30 04/17/2017
+___________________________
+Makes the niftyNav an actual jQuery plugin.
 
 VERSION 2.2.2 12/22/2016
 ___________________________
