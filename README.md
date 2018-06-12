@@ -1,4 +1,4 @@
-# Nifty Nav
+# Nifty Nav - NO LONGER MAINTAINED
 Nifty Nav is a quick and easy navigation plugin using Sass and jQuery. It makes
 making navigation systems a little better. Built by the awesome people over at [factor1](http://factor1studios.com).
 
